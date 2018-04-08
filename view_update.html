@@ -2,7 +2,7 @@
 
 <html>
 
-<title>BORROW</title>
+<title>View & Update</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,6 +22,12 @@ p {line-height: 2}
     background-size: cover;
 	background-color:#f0ffff;
 }
+table {
+	width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+}
 </style>
 
 
@@ -29,26 +35,96 @@ p {line-height: 2}
 
 <!-- body -->
 
-<header class="w3-display-container w3-wide bgimg w3-center">
+<header class="w3-display-container w3-wide bgimg w3-center" id="update">
 <div class="w3-display-center w3-padding-32">
 		<div class="w3-bar w3-border w3-left">
 			<a class="w3-bar-item w3-button"><b>Back</b></a>
 		</div>
-		</br></br>
-		<h2> This is when you last borrowed your blazer :)</h2>
-		<p> Note that this will only the latest blazer you have borrowed. </p>
-		</br>
-      <h2>Blazer Number: </h2>
-      <h2>Borrowed Date: </h2>
+		<br><br>
+		
+		
+		<p>Update Students' records here</p>
 
-  </div>
+		<table>
+		
+		<tr>
+		<th>Student Name</th>
+		<th>State</th> 
+		<th>Borrowed Date</th>
+		<th>Returned Date</th>
+		</tr>
+		
+		<!-- data from students--> 
+		<tr>
+		<td>
+		<button onclick="document.getElementById('name2').style.display='block'" class="w3-button">xyz@dhs.sg</button></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		</tr>
+		
+		<tr>
+		<td>
+		<button onclick="document.getElementById('name1').style.display='block'" class="w3-button">abc@dhs.sg</button></td>
+		<td>not returned</td>
+		<td>01/03/2018</td>
+		<td></td>
+		</tr>
+		
+		</table>
+		
+		<div id="name2" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+			<div class="w3-container w3-white w3-center">
+			<p>xyz@dhs.sg</p>
+			<input class="w3-input w3-border" type="text" placeholder="Blazer Top" name="blazertop" id="top">
+			<input class="w3-input w3-border" type="text" placeholder="Blazer Bottom" name="blazerbottom" id="bottom">
+			<input class="w3-input w3-border" type="text" placeholder="Blazer Cover" name="blazercover" id="cover">
+			<input class="w3-input w3-border" type="text" placeholder="Remarks" name="remarks" id="remarks">
+			<br>      
+				  
+			<div class="w3-row">
+				<div class="w3-half">
+				<button onclick="document.getElementById('name2').style.display='none'" type="button" class="w3-button w3-block w3-light-grey">Cancel</button>
+				</div>
+				<div class="w3-half">
+				<span onclick="newElement()" type="submit" value="Edit" class="w3-button w3-block w3-black w3-text-white">Submit</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		
+		<div id="name1" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+			<div class="w3-container w3-white w3-center">
+			<p>abc@dhs.sg</p>
+			<br>
+			Blazer Top:<br> <!-- database, from staffs' input-->
+			Blazer Bottom:<br>
+			Blazer Cover:<br>
+			Remarks:<br>
+			
+			<div class="w3-row">
+				<div class="width:33%">
+				<button onclick="document.getElementById('name1').style.display='none'" type="button" class="w3-button w3-block w3-light-grey">Cancel</button>
+				</div>
+				<div class="width:33%">
+				<button onclick="" type="submit" class="w3-button w3-block w3-black w3-text-white">Send Reminder</button>
+				</div>
+				<div class="width:33%">
+				<button onclick="getElement()" type="submit" value="Edit" class="w3-button w3-block w3-black w3-text-white">Update</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+			
+		
+
+</div>
 </header>
 
-<!-- Footer -->
-
-<footer class="w3-center w3-white w3-padding-16">
-  <p>Created by DHS 2018'5C33, Zheng Yi</p>
-</footer>
 
 </body>
 </html>
