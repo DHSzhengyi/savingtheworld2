@@ -2,7 +2,7 @@
 
 <html>
 
-<title>BLAZER LOAN</title>
+<title>BORROW</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,23 +10,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-body,h2,h3{font-family: "Lato", sans-serif;}
+body{font-family: "Lato", sans-serif;}
 body, html {
-    height: 100%;
     line-height: 1.8;
 }
 p {line-height: 2}
+
 .bgimg {
-    min-height: 100%;
     background-position: center;
-    background-size: cover;
 	background-color:#f0ffff;
-}
-a:link {
-	text-decoration: none;
-}
-button:hover{
-	background-color: dark-grey;
 }
 </style>
 
@@ -37,23 +29,98 @@ button:hover{
 
 <header class="w3-display-container w3-wide bgimg w3-center" id="home">
 <div class="w3-display-center w3-padding-32">
-		<h2> Welcome to DHS Blazer Loan! </h2>
-		<p> blazing your life</p>
-		</br>
+		<div class="w3-bar w3-border w3-left">
+			<a class="w3-button">Back</a>
+		</div>
+		<br><br>
+
+		<!-- Choose Register Number -->
+		<form action="/action_page.php">
+		Register Number:
+			<select name="regno">
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			</select>
+			</form>
+					
+		<p><input class="w3-input w3-round-small" placeholder="Mobile Number" required name="Mobile Number" maxlength="8" size="8"></p>
 		
-		<p>For Students:</p>
-        <button class="w3-button w3-light-grey w3-round-large"><a href="borrow.html"><h3>Borrow</h3></a></button>
-	    </br>
+		<!-- Event 1-->
+			<p><input class="w3-input w3-round-small" placeholder="Event Name 1" required name="Event Name"></p>
 		
-		<p>For Teachers:</p>
-		<button class="w3-button w3-light-grey w3-round-large"><a><h3>Approve</h3></a></button>
-		</br>
+			<div class="row">
+			<form action="/action_page.php">
+				Start Date:
+				<input type="date" name="startdate">
+				End Date:
+				<input type="date" name="enddate">
+			</form>
+			</div>
+			<br>
 		
-		<p>For SSC Staff:</p>
-        <button class="w3-button w3-light-grey w3-round-large"><a href="view_update.html"><h3>View/Update</h3></a></button>
-		</br>
+		<!-- Event 2-->
+			<p><input class="w3-input w3-round-small" placeholder="Event Name 2 (if any)"></p>
+		
+			<div class="row">
+			<form action="/action_page.php">
+				Start Date:
+				<input type="date" name="startdate">
+				End Date:
+				<input type="date" name="enddate">
+			</form>
+			</div>
+			<br>
+
+		<!-- Choose Teacher-->
+		<form action="/action_page.php">
+		Teacher In-charge:
+		</form>
+
+		<input type="text" placeholder="Search your Teacher In-charge" id="search_term" required="Teacher In-charge">
+		<input type="submit" value="Search" id="search_button">
+		<br>
+		<br>
+		
+		<input class="w3-button w3-light-grey w3-round-large w3-hover-dark-grey" type="submit">					
+
   </div>
 </header>
+
 
 </body>
 </html>
