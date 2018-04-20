@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>BORROW</title>
+<title>APPROVE</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,8 +10,42 @@
 
 <body>
 
-
-
+<!-- display student's request in table form, separate the approved & not yet approved -->
+  	  
+  <table>
+      <tr>
+		  <th>Student</th>
+		  <th>Approval Status</th> 
+		  </tr>
+  
+  	  <tr>
+		  <td>
+		  <button onclick="document.getElementById('n1').style.display='block'" class="w3-button">xyz@dhs.sg</button></td>
+      <td></td>
+      </tr>
+  </table>
+  
+  <!-- pop up of the student's application details -->
+  
+  		<div id="n1" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+			<div class="w3-container w3-white w3-center">
+			<p>xyz@dhs.sg</p>
+        
+        <h3> Reg.NO. : {{ regno }} </h3>
+        <h3> Event 1: {{ event1 }} </h3>
+        <h3> Event 2: {{ event2 }} </h3>
+        <h3> Mobile NO. : {{ phone }} </h3>
+        
+        <div class="row">
+          <button class="width:50%" type="submit">Approve</button>
+          <button class="width:50%" onclick="#">Cancel</button>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+                  
 </body>
 
 </html>
